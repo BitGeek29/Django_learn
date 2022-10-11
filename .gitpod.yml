@@ -5,4 +5,4 @@ tasks:
   - init: 'python3 -m venv .venv'
     command: '. run'
 
-  - init: 'pip install django'
+  - init: 'pip install django djongo dnspython'
