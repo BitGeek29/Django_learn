@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mongodb',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +76,15 @@ WSGI_APPLICATION = 'dbJang.wsgi.application'
 
 DATABASES = {
     'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'Mongodb',
+            'ENFORCE_SCHEMA': False,
+            'CLIENT': {
+                'host': 'mongodb+srv://admin:admin123@mongodb.aem1aqf.mongodb.net/?retryWrites=true&w=majority'
+            }  
+        },
+    
+    'sqlite3': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
